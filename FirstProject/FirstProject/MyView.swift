@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MyView.swift
 //  FirstProject
 //
 //  Created by Ibrahim Hassan on 12/06/20.
@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MyView: View {
     
-    var viewModel: ViewModel
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         HStack {
-            ForEach(viewModel.cards) { card in
+            ForEach(viewModel.cards.shuffled()) { card in
                 CardView.init(card: card).onTapGesture {
                     self.viewModel.choose(card: card)
                 }
@@ -26,14 +26,13 @@ struct ContentView: View {
 }
 
 struct CardView: View {
-    var card: MemoryGame<String>.Card
+    var card: Model<String>.Card
     
     var body: some View {
         ZStack {
             if card.isFaceUp {
-                RoundedRectangle.init(cornerRadius: 10).fill()
                 RoundedRectangle.init(cornerRadius: 10).stroke(lineWidth: 3)
-                RoundedRectangle.init(cornerRadius: 10).fill()
+                RoundedRectangle.init(cornerRadius: 10).fill(Color.white)
                 Text(card.content)
             } else {
                 RoundedRectangle.init(cornerRadius: 10).fill()
@@ -45,7 +44,7 @@ struct CardView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView(viewModel: ViewModel())
+            MyView(viewModel: ViewModel())
         }
     }
 }

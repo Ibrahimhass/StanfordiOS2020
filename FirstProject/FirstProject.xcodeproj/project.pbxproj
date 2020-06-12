@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		ED75B155249301FE001628E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75B154249301FE001628E6 /* AppDelegate.swift */; };
 		ED75B157249301FE001628E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75B156249301FE001628E6 /* SceneDelegate.swift */; };
-		ED75B159249301FE001628E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75B158249301FE001628E6 /* ContentView.swift */; };
+		ED75B159249301FE001628E6 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75B158249301FE001628E6 /* MyView.swift */; };
 		ED75B15B24930200001628E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED75B15A24930200001628E6 /* Assets.xcassets */; };
 		ED75B15E24930200001628E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED75B15D24930200001628E6 /* Preview Assets.xcassets */; };
 		ED75B16124930200001628E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED75B15F24930200001628E6 /* LaunchScreen.storyboard */; };
-		ED75B1692493211F001628E6 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75B1682493211F001628E6 /* MemoryGame.swift */; };
+		ED75B1692493211F001628E6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75B1682493211F001628E6 /* Model.swift */; };
 		ED75B16B2493214B001628E6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED75B16A2493214B001628E6 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,12 +21,12 @@
 		ED75B151249301FE001628E6 /* FirstProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED75B154249301FE001628E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED75B156249301FE001628E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED75B158249301FE001628E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ED75B158249301FE001628E6 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		ED75B15A24930200001628E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED75B15D24930200001628E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED75B16024930200001628E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED75B16224930200001628E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED75B1682493211F001628E6 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		ED75B1682493211F001628E6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		ED75B16A2493214B001628E6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,9 +62,9 @@
 			children = (
 				ED75B154249301FE001628E6 /* AppDelegate.swift */,
 				ED75B156249301FE001628E6 /* SceneDelegate.swift */,
-				ED75B158249301FE001628E6 /* ContentView.swift */,
+				ED75B158249301FE001628E6 /* MyView.swift */,
 				ED75B16A2493214B001628E6 /* ViewModel.swift */,
-				ED75B1682493211F001628E6 /* MemoryGame.swift */,
+				ED75B1682493211F001628E6 /* Model.swift */,
 				ED75B15A24930200001628E6 /* Assets.xcassets */,
 				ED75B15F24930200001628E6 /* LaunchScreen.storyboard */,
 				ED75B16224930200001628E6 /* Info.plist */,
@@ -155,8 +155,8 @@
 				ED75B16B2493214B001628E6 /* ViewModel.swift in Sources */,
 				ED75B155249301FE001628E6 /* AppDelegate.swift in Sources */,
 				ED75B157249301FE001628E6 /* SceneDelegate.swift in Sources */,
-				ED75B1692493211F001628E6 /* MemoryGame.swift in Sources */,
-				ED75B159249301FE001628E6 /* ContentView.swift in Sources */,
+				ED75B1692493211F001628E6 /* Model.swift in Sources */,
+				ED75B159249301FE001628E6 /* MyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

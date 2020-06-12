@@ -1,16 +1,18 @@
 //
-//  MemoryGame.swift
+//  Model.swift
 //  FirstProject
 //
 //  Created by Ibrahim Hassan on 12/06/20.
 //  Copyright © 2020 Swiftify. All rights reserved.
 //
 
-struct MemoryGame<CardContent> {
+struct Model<CardContent> {
     var cards: [Card]
     
-    func choose(card: Card) {
-        print ("Card chosen \(card)")
+    mutating func choose(card: Card) {
+        if let index = cards.lastIndex(where: { $0.id == card.id }) {
+            cards[index].isFaceUp = !cards[index].isFaceUp
+        }
     }
     
     init(numberOfPairOfCards: Int, cardContentFactory: (Int) -> CardContent) {

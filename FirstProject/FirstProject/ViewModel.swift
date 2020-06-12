@@ -8,24 +8,26 @@
 
 import SwiftUI
 
-class ViewModel {
+class ViewModel: ObservableObject {
+        
+    @Published private(set) var model: Model<String> = ViewModel.createMemoryGame()
     
-    private(set) var model: MemoryGame<String> = ViewModel.createMemoryGame()
-    
-    static func createMemoryGame() -> MemoryGame<String> {
-        let emojis = ["🦁", "🦊", "💼"]
-        return MemoryGame<String>.init(numberOfPairOfCards: emojis.count) { pairIndex in
+    static func createMemoryGame() -> Model<String> {
+        let emojis = ["🦁", "🦊", "💼", "㊗️", "🆎"]
+        let randomInt = Int.random(in: 2..<emojis.count)
+        return Model<String>.init(numberOfPairOfCards: randomInt) { pairIndex in
             return emojis[pairIndex]
         }
     }
     
-    var cards: Array<MemoryGame<String>.Card> {
+    var cards: Array<Model<String>.Card> {
         model.cards
     }
     
     // MARK:- Intenet(s)
     
-    func choose(card: MemoryGame<String>.Card) {
+    func choose(card: Model<String>.Card) {
+        objectWillChange.send()
         model.choose(card: card)
     }
     
